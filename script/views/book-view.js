@@ -1,13 +1,13 @@
 'use strict';
 //after code review
-var app = app || {};
+var app = app || {}; 
 
 (function(module){
   const bookView = {};
 
   bookView.initIndexPage = function(){
     $('.container').hide();
-    $('.book-view').show();
+    $('.book-list').show();
     module.Book.all.map(book => $('book-list').append(book.toHtml()));
   }
 

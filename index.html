@@ -3,34 +3,46 @@
 <head>
   <title> First PAge
   </title>
+  <script type="text/x-handlebars-template" id="error-template">
+  <h2>Error Message</h2>
+  <p>{{status}}: {{statusText}}</p>
+</script>
+
+  <script type="text/x-handlebars-template" id="book-list-template">
+    <h3>Author:{{author}}</h3>
+    <h3>Title:{{title}}</h3>
+
+</script>
 </head>
 
 <body>
 <h1> hello world</h1>
-<section id="book-template">
+<section id="book-list">
   
-  <section class="task-view container">
-    <h3>Author</h3>
-    <ul id=""></ul>
-    <h3>Title</h3>
-    <ul id=""></ul>
-  </section>
- 
+   
   <section>
       <h2> Books count</h2>
    </section>
 
 
-<section>
+
   <h2>About task-view</h2>
 
 </section>
 
 <!-- add jquery library and handlebars -->
-
-
-<script src="script/models/books.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script src="script/models/book.js"></script>
 <script src="script/views/book-view.js"></script>
 <script src="script/views/error-view.js"></script>
+
 </body>
 </html>
+
+  <!-- <section class="books container">
+    <h3>Author:{{author}}</h3>
+    <ul id=""></ul>
+    <h3>Title</h3>
+    <ul id=""></ul> -->
+  <!-- </section> -->
