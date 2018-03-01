@@ -13,24 +13,51 @@
     <h3>Title:{{title}}</h3>
 
 </script>
+
+<script type="text/x-handlebars-template" id="book-detail-template">
+  <div class="books container">
+      <h3>Author:{{author}}</h3>
+      <h3>Title:{{title}}</h3>
+      <p>isbn:{{isbn}}</p>
+      <p>url:{{url}}</p>
+      <p>description:{{description}}</p>
+    
+
+  </div>
+ 
+
+</script>
 </head>
 
 <body>
-   <section class="books container">
-    <h3>Author:{{author}}</h3>
-    <ul id=""></ul>
-    <h3>Title</h3>
-    <ul id=""></ul>
-  </section>
+
 <h1> hello world</h1>
+
 <section id="book-list">
   
    
-  <section>
+<section>
+
+<section id="book-detail">
+  
+   
+<section>
+
+<section id="error">
+
+<section>
+
+
       <h2> Books count</h2>
    </section>
 
-
+<form>
+  <input type = "text" id="author" />
+  <input type = "text" id="title" />
+  <input type = "text" id="url" />
+  <input type = "text" id="isbn" />
+  <input type = "description" />
+</form>
 
   <h2>About task-view</h2>
 
@@ -38,6 +65,7 @@
 
 <!-- add jquery library and handlebars -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 <script src="script/models/book.js"></script>
 <script src="script/views/book-view.js"></script>
