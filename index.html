@@ -9,59 +9,64 @@
 </script>
 
   <script type="text/x-handlebars-template" id="book-list-template">
+    <li class="book-items" data-book-id={{book-id}}></li>
+    <div class="book-container"></div>
+    <!-- <img src="{{image_url}}" /> -->
     <h3>Author:{{author}}</h3>
     <h3>Title:{{title}}</h3>
-
+    <div class="details-button"><a href="/books/{{book_id}}">View Details</a></div>
 </script>
 
 <script type="text/x-handlebars-template" id="book-detail-template">
-  <div class="books container">
+  <div >
       <h3>Author:{{author}}</h3>
       <h3>Title:{{title}}</h3>
       <p>isbn:{{isbn}}</p>
-      <p>url:{{url}}</p>
+      <p>url:{{image_url}}</p>
       <p>description:{{description}}</p>
-    
-
   </div>
- 
-
 </script>
 </head>
 
 <body>
-
-<h1> hello world</h1>
-
-<section id="book-list">
-  
-   
-<section>
-
-<section id="book-detail">
-  
-   
-<section>
-
-<section id="error">
-
-<section>
-
-
+<header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/books/new">Add a new book</a></li>
+  </ul>
+</header>
+<section class="book-view container">
+  <h2>Books</h2>
+  <ul id="book-list" class="book-container">
+    
+  </ul>
+  <section>
       <h2> Books count</h2>
-   </section>
+</section>
+</section>
+<section class="detail-view container">
+    <section id="book-detail">
+      hello
+    </section>
+</section>
+<section id="error-view">
 
-<form>
-  <input type = "text" id="author" />
-  <input type = "text" id="title" />
-  <input type = "text" id="url" />
-  <input type = "text" id="isbn" />
-  <input type = "description" />
-</form>
+</section>
+
+<section class="create-view container">
+    <form id="create-form">
+        <label><input type = "text" id="book-author" placeholder="Author Name"/></label>
+        <label><input type = "text" id="book-title" placeholder="Book Title" /></label>
+        <label><input type = "text" id="book-url" placeholder="Book URL" /></label>
+        <label><input type = "text" id="book-isbn" placeholder="Book isbn number" /></label>
+        <label><input type = "book-description" placeholder="Book description" /></label>
+      </form>
+      <button type="submit">Submit</button>
+</section>
 
   <h2>About task-view</h2>
 
-</section>
+
 
 <!-- add jquery library and handlebars -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -70,6 +75,8 @@
 <script src="script/models/book.js"></script>
 <script src="script/views/book-view.js"></script>
 <script src="script/views/error-view.js"></script>
+
+<script src="script/views/routes.js"></script>
 
 </body>
 </html>
