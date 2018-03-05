@@ -49,19 +49,21 @@
       hello
     </section>
 </section>
-<section id="error-view">
+<section class="error-view container"></section>
+  <section id="error">
 
+  </section>
 </section>
-
 <section class="create-view container">
     <form id="create-form">
-        <label><input type = "text" id="book-author" placeholder="Author Name"/></label>
-        <label><input type = "text" id="book-title" placeholder="Book Title" /></label>
-        <label><input type = "text" id="book-url" placeholder="Book URL" /></label>
-        <label><input type = "text" id="book-isbn" placeholder="Book isbn number" /></label>
-        <label><input type = "book-description" placeholder="Book description" /></label>
-      </form>
-      <button type="submit">Submit</button>
+        <label><input type ="text" id="author" placeholder="Author Name"/></label><br>
+        <label><input type ="text" id="title" placeholder="Book Title" /></label><br>
+        <label><input type = "text" id="image_url" placeholder="Book URL" /></label><br>
+        <label><input type = "text" id="isbn" placeholder="Book isbn number" /></label><br>
+        <label><textarea type = "description" id = "description" placeholder="Book description" rows=3/></textarea></label>
+      
+      <input type="submit" value="submit"/>
+    </form>
 </section>
 
   <h2>About task-view</h2>
@@ -81,9 +83,3 @@
 </body>
 </html>
 
-  <!-- <section class="books container">
-    <h3>Author:{{author}}</h3>
-    <ul id=""></ul>
-    <h3>Title</h3>
-    <ul id=""></ul> -->
-  <!-- </section> -->

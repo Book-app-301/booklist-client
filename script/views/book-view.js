@@ -5,15 +5,12 @@ var app = app || {};
 (function(module){
 
   const bookView = {};
-  function reset(){
-    $('.container').hide();
-    $('.container').empty();
-  }
 
-  bookView.initIndexPage = function(){
-    $('.container').hide()
-    $('.error-view').hide();
+  bookView.initIndexPage = function(ctx){
+    $('.container').hide();
     $('.book-view').show();
+    $('#book-list').empty();
+    $('#book-list').show();
     module.Book.all.map(book => $('#book-list').append(book.toHtml()));
   };
 
@@ -25,23 +22,26 @@ var app = app || {};
     console.log(template);
     $('#book-detail').append(template(ctx));
   };
-
-  bookView.initcreateFormPage = function(ctx){
-    reset();
-    console.log('youre hitting initCreate');
-    $('.container').hide();
+  bookView.test = function(){
+    console.log('help');
     $('.create-view').show();
-   
-    $('#create-form').on('submit'), function(event){
-      let newBook = {
+  };
+
+  bookView.initCreateFormPage = function(ctx){
+    $('.create-view').show();
+    $('#create-form').on('submit', function(event){
+      event.preventDefault();
+      let book = {
         author: event.target.author.value,
         title: event.target.title.value,
         isbn: event.target.isbn.value,
         image_url: event.target.image_url.value,
         description: event.target.description.value,
       };
-      module.Book.create(newBook);
-    };
+
+      module.Book.create(book);
+    });
+
   };
 
   module.bookView = bookView;
