@@ -3,9 +3,83 @@
 <head>
   <title> First PAge
   </title>
+  <script type="text/x-handlebars-template" id="error-template">
+  <h2>Error Message</h2>
+  <p>{{status}}: {{statusText}}</p>
+</script>
+
+  <script type="text/x-handlebars-template" id="book-list-template">
+    <li class="book-items" data-book-id={{book-id}}></li>
+    <div class="book-container"></div>
+    <!-- <img src="{{image_url}}" /> -->
+    <h3>Author:{{author}}</h3>
+    <h3>Title:{{title}}</h3>
+    <div class="details-button"><a href="/books/{{book_id}}">View Details</a></div>
+</script>
+
+<script type="text/x-handlebars-template" id="book-detail-template">
+  <div >
+      <h3>Author:{{author}}</h3>
+      <h3>Title:{{title}}</h3>
+      <p>isbn:{{isbn}}</p>
+      <p>url:{{image_url}}</p>
+      <p>description:{{description}}</p>
+  </div>
+</script>
 </head>
 
 <body>
-<h1> hello world</h1>
+<header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/books/new">Add a new book</a></li>
+  </ul>
+</header>
+<section class="book-view container">
+  <h2>Books</h2>
+  <ul id="book-list" class="book-container">
+    
+  </ul>
+  <section>
+      <h2> Books count</h2>
+</section>
+</section>
+<section class="detail-view container">
+    <section id="book-detail">
+      hello
+    </section>
+</section>
+<section class="error-view container"></section>
+  <section id="error">
+
+  </section>
+</section>
+<section class="create-view container">
+    <form id="create-form">
+        <label><input type ="text" id="author" placeholder="Author Name"/></label><br>
+        <label><input type ="text" id="title" placeholder="Book Title" /></label><br>
+        <label><input type = "text" id="image_url" placeholder="Book URL" /></label><br>
+        <label><input type = "text" id="isbn" placeholder="Book isbn number" /></label><br>
+        <label><textarea type = "description" id = "description" placeholder="Book description" rows=3/></textarea></label>
+      
+      <input type="submit" value="submit"/>
+    </form>
+</section>
+
+  <h2>About task-view</h2>
+
+
+
+<!-- add jquery library and handlebars -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script src="script/models/book.js"></script>
+<script src="script/views/book-view.js"></script>
+<script src="script/views/error-view.js"></script>
+
+<script src="script/views/routes.js"></script>
+
 </body>
 </html>
+
